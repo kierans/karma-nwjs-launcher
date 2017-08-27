@@ -4,9 +4,27 @@ var ncp = require('ncp').ncp;
 var async = require('async');
 var merge = require('merge');
 var copy = require('copy');
+var builder = require('nwjs-builder-phoenix');
 
 function findpath() {
-  // TODO: Implement algorithm to find nwjs-builder-phoenix NWjs builds.
+  /*
+   * Assuming this script is at <project_root>/node_modules/karma-nwjs-phoenix-launcher,
+   * this should resolve to <project_root>/package.json.
+   */
+  var pkgPath = path.join(path.resolve(__dirname, "../.."), "package.json");
+  var pkg = JSON.parse(fs.readFileSync(pkgPath));
+  var nwVersion = pkg.build.nwVersion;
+
+  var downloadedNwjs = (new builder.Downloader({
+    platform: process.platform,
+    arch: process.arch,
+    version: nwVersion,
+    flavor: 'sdk',
+    useCaches: true,
+    showProgress: true
+  })).fetchAndExtract();
+
+  return builder.findExecutable(process.platform, downloadedNwjs);
 }
 
 var NodeWebkitBrowser = function(baseBrowserDecorator, args,config) {
