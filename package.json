@@ -1,28 +1,29 @@
 {
-  "name": "karma-nwjs-launcher",
+  "name": "karma-nwjs-phoenix-launcher",
   "version": "0.1.0",
-  "description": "A Karma plugin. Launcher for node-webkit.",
+  "description": "A Karma plugin. Launcher for node-webkit builds provided by nwjs-builder-phoenix",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/vicwang163/karma-nwjs-launcher.git"
+    "url": "git://github.com/kierans777/karma-nwjs-phoenix-launcher.git"
   },
   "keywords": [
     "karma-plugin",
     "karma-launcher",
-    "node-webkit"
+    "node-webkit",
+    "nwjs-builder-phoenix"
   ],
   "dependencies": {
     "async": "~0.2.10",
     "merge": "~1.1.2",
-    "ncp": "~0.5.0",
-    "nw": "0.18.8"
+    "ncp": "~0.5.0"
   },
   "peerDependencies": {
-    "karma": ">=0.9"
+    "karma": ">=0.9",
+    "nwjs-builder-phoenix": "*"
   },
   "license": "MIT",
   "devDependencies": {
@@ -44,6 +45,10 @@
     {
       "name": "Michal Charemza",
       "email": "michalcharemza@gmail.com"
+    },
+    {
+      "name": "Kieran Simpson",
+      "email": "kierans777@gmail.com"
     }
   ]
 }

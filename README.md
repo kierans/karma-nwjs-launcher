@@ -1,40 +1,42 @@
-# karma-nwjs-launcher
+# karma-nwjs-phoenix-launcher
 
-> Launcher for NWJS. 
+Launcher for NWJS, that uses [nwjs-builder-phoenix](https://github.com/evshiron/nwjs-builder-phoenix/) to provide the NW.js builds
 
 ---
 
-This is a small but experimental launcher, based on the [Safari Launcher](https://github.com/karma-runner/karma-safari-launcher) by Vojta Jina and contributors, and not affiliated with any official or semi-official Karma plugins.
+This launcher is forked from [karma-nwjs-launcher](https://github.com/vicwang163/karma-nwjs-launcher) and updated to use nwjs-builder-phoenix.
+
+The **main** difference between this launcher and other NW.js Karma launchers is that this launcher **does not** bind to a particular build/version of NW.js. It is up to the project to configure (via nwjs-builder-phoenix) the build to use.
 
 ---
 
 
 ## Installation
 
-The easiest way is to keep `karma-nwjs-launcher` as a devDependency in your `package.json`.
+The easiest way is to keep `karma-nwjs-phoneix-launcher` as a devDependency in your `package.json`.
 
 
     {
       "devDependencies": {
         "karma": "~0.10",
-        "karma-nwjs-launcher": "0.1.0"
+        "karma-nwjs-phoneix-launcher": "0.1.0"
       }
     }
 
 
 You can do it on the command line by:
 
-    npm install karma-nwjs-launcher --save-dev
+    npm install karma-nwjs-phoneix-launcher --save-dev
 
 ## Usage
 
     // karma.conf.js
     module.exports = function(config) {
-      browsers: ['NWJS'],
+      browsers: [ 'NWJS' ],
       NWJSConfig:{
         copy:{
-          base:projectRoot,
-          items:['xxx/src/config']
+          base: projectRoot,
+          items: [ 'xxx/src/config' ]
         }
       }
     };
