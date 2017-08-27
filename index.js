@@ -3,8 +3,11 @@ var path = require('path');
 var ncp = require('ncp').ncp;
 var async = require('async');
 var merge = require('merge');
-var findpath = require('nw').findpath;
-var copy = require('copy')
+var copy = require('copy');
+
+function findpath() {
+  // TODO: Implement algorithm to find nwjs-builder-phoenix NWjs builds.
+}
 
 var NodeWebkitBrowser = function(baseBrowserDecorator, args,config) {
   baseBrowserDecorator(this);
@@ -15,6 +18,7 @@ var NodeWebkitBrowser = function(baseBrowserDecorator, args,config) {
   });
   searchPaths.unshift(process.env.NODE_PATH);
 
+  // used by Karma
   this._start = function(url) {
     var self = this;
     var SOURCE_PATH = path.join(__dirname, 'runner.nw');
