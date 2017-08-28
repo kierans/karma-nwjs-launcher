@@ -49,9 +49,8 @@ var NodeWebkitBrowser = function(baseBrowserDecorator, args, config) {
     })
     .then(function(found) {
       callback(null, found);
-    }, function(err) {
-      callback(err);
-    });
+    })
+    .catch(callback);
   };
 
   // used by Karma
