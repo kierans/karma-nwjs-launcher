@@ -13,20 +13,20 @@ The **main** difference between this launcher and other NW.js Karma launchers is
 
 ## Installation
 
-The easiest way is to keep `karma-nwjs-phoneix-launcher` as a devDependency in your `package.json`.
+The easiest way is to keep `karma-nwjs-phoenix-launcher` as a devDependency in your `package.json`.
 
 
     {
       "devDependencies": {
         "karma": "~0.10",
-        "karma-nwjs-phoneix-launcher": "0.1.0"
+        "karma-nwjs-phoenix-launcher": "0.1.0"
       }
     }
 
 
 You can do it on the command line by:
 
-    npm install karma-nwjs-phoneix-launcher --save-dev
+    npm install karma-nwjs-phoenix-launcher --save-dev
 
 ## Usage
 
