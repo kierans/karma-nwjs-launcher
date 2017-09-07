@@ -1,6 +1,5 @@
 {
   "name": "karma-nwjs-phoenix-launcher",
-  "private": true,
   "version": "0.1.0",
   "description": "A Karma plugin. Launcher for node-webkit builds provided by nwjs-builder-phoenix",
   "main": "index.js",
@@ -25,7 +24,7 @@
   },
   "peerDependencies": {
     "karma": ">=0.9",
-    "nwjs-builder-phoenix": "*"
+    "nwjs-builder-phoenix": ">=1.14.5"
   },
   "license": "MIT",
   "devDependencies": {
