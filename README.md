@@ -32,11 +32,23 @@ You can do it on the command line by:
 
     // karma.conf.js
     module.exports = function(config) {
+      // browsers: [ "debug" ],
       browsers: [ "NWJS" ],
       NWJS: {
         copy: {
           base: projectRoot,
           items: [ "xxx/src/config" ]
         }
+      }
+      
+      /*
+       * Using custom launchers, different flags can be appended to the nwjs cmd
+       * to customise the behaviour
+       */
+      customLaunchers: {
+         "debug": {
+            base: "NWJS",
+            flags: [ "--remote-debugging-port=9229" ]
+         }
       }
     };
