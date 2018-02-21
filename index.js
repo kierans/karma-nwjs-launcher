@@ -97,9 +97,9 @@ var NodeWebkitBrowser = function(baseBrowserDecorator, args, config) {
       }],
       'exec': ['index.html:write', 'package.json:write', 'command', function(callback, results) {
         process.env.NODE_PATH = searchPaths.join(path.delimiter);
-				args.flags = args.flags || [];
+        args.flags = args.flags || [];
 
-				self._execCommand(results['command'], [STATIC_PATH].concat(args.flags));
+        self._execCommand(results['command'], [STATIC_PATH].concat(args.flags));
       }]
     });
   };
