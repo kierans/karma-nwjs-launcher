@@ -32,11 +32,11 @@ You can do it on the command line by:
 
     // karma.conf.js
     module.exports = function(config) {
-      browsers: [ 'NWJS' ],
-      NWJSConfig:{
-        copy:{
+      browsers: [ "NWJS" ],
+      NWJS: {
+        copy: {
           base: projectRoot,
-          items: [ 'xxx/src/config' ]
+          items: [ "xxx/src/config" ]
         }
       }
     };

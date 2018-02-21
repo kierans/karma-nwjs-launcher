@@ -34,7 +34,7 @@ var NodeWebkitBrowser = function(baseBrowserDecorator, args, config) {
     var pkgPath = path.join(path.resolve(__dirname, "../.."), "package.json");
     var pkg = JSON.parse(fs.readFileSync(pkgPath));
     var nwVersion = pkg.build.nwVersion;
-  
+
     (new builder.Downloader({
       platform: process.platform,
       arch: process.arch,
@@ -115,7 +115,7 @@ NodeWebkitBrowser.prototype = {
   ENV_CMD: 'NODEWEBKIT_BIN'
 };
 
-NodeWebkitBrowser.$inject = ['baseBrowserDecorator', 'args', 'config.NWJSConfig'];
+NodeWebkitBrowser.$inject = ['baseBrowserDecorator', 'args', 'config.NWJS'];
 
 // PUBLISH DI MODULE
 module.exports = {
